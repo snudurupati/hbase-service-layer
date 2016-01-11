@@ -1,0 +1,482 @@
+{
+  "patientId" : 234550033,
+  "age" : 59,
+  "gender" : "F",
+  "fromDate" : "2014-01-01",
+  "toDate" : "2015-12-31",
+  "rxHistory" : [ {
+    "2014-12" : [ {
+      "74706990" : [ {
+        "svcDt" : "2014-12-08",
+        "plottingDates" : "2014-12-15T00:00:00.000-05:00",
+        "ndcCd" : 74706990,
+        "mktedProdNm" : "SYNTHROID",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 2050111
+      } ]
+    }, {
+      "65027510" : [ {
+        "svcDt" : "2014-12-02",
+        "plottingDates" : "2014-12-15T00:00:00.000-05:00",
+        "ndcCd" : 65027510,
+        "mktedProdNm" : "AZOPT",
+        "daysSupplyCnt" : 20,
+        "pharmacyId" : 2633091
+      } ]
+    }, {
+      "16729000101" : [ {
+        "svcDt" : "2014-12-15",
+        "plottingDates" : "2014-12-15T00:00:00.000-05:00",
+        "ndcCd" : 16729000101,
+        "mktedProdNm" : "GLIMEPIRIDE",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "54458096510" : [ {
+        "svcDt" : "2014-12-29",
+        "plottingDates" : "2014-12-15T00:00:00.000-05:00",
+        "ndcCd" : 54458096510,
+        "mktedProdNm" : "MELOXICAM",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 978685
+      } ]
+    }, {
+      "65162010150" : [ {
+        "svcDt" : "2014-12-29",
+        "plottingDates" : "2014-12-15T00:00:00.000-05:00",
+        "ndcCd" : 65162010150,
+        "mktedProdNm" : "GABAPENTIN",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 978685
+      } ]
+    }, {
+      "16571020150" : [ {
+        "svcDt" : "2014-12-18",
+        "plottingDates" : "2014-12-15T00:00:00.000-05:00",
+        "ndcCd" : 16571020150,
+        "mktedProdNm" : "DICLOFENAC SODIUM DR",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 581220
+      } ]
+    } ]
+  }, {
+    "2015-01" : [ {
+      "65027510" : [ {
+        "svcDt" : "2015-01-16",
+        "plottingDates" : "2015-01-15T00:00:00.000-05:00",
+        "ndcCd" : 65027510,
+        "mktedProdNm" : "AZOPT",
+        "daysSupplyCnt" : 20,
+        "pharmacyId" : 2633091
+      } ]
+    }, {
+      "781261305" : [ {
+        "svcDt" : "2015-01-08",
+        "plottingDates" : "2015-01-15T00:00:00.000-05:00",
+        "ndcCd" : 781261305,
+        "mktedProdNm" : "AMOXICILLIN",
+        "daysSupplyCnt" : 7,
+        "pharmacyId" : 1873331
+      } ]
+    }, {
+      "781149668" : [ {
+        "svcDt" : "2015-01-06",
+        "plottingDates" : "2015-01-15T00:00:00.000-05:00",
+        "ndcCd" : 781149668,
+        "mktedProdNm" : "AZITHROMYCIN",
+        "daysSupplyCnt" : 5,
+        "pharmacyId" : 721076
+      } ]
+    }, {
+      "68382041210" : [ {
+        "svcDt" : "2015-01-12",
+        "plottingDates" : "2015-01-15T00:00:00.000-05:00",
+        "ndcCd" : 68382041210,
+        "mktedProdNm" : "OMEPRAZOLE",
+        "daysSupplyCnt" : 60,
+        "pharmacyId" : 581220
+      } ]
+    } ]
+  }, {
+    "2015-02" : [ {
+      "23485745" : [ {
+        "svcDt" : "2015-02-04",
+        "plottingDates" : "2015-02-14T00:00:00.000-05:00",
+        "ndcCd" : 23485745,
+        "mktedProdNm" : "VANIQA",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 6058776
+      } ]
+    }, {
+      "65027510" : [ {
+        "svcDt" : "2015-02-23",
+        "plottingDates" : "2015-02-14T00:00:00.000-05:00",
+        "ndcCd" : 65027510,
+        "mktedProdNm" : "AZOPT",
+        "daysSupplyCnt" : 20,
+        "pharmacyId" : 2633091
+      } ]
+    }, {
+      "59762491005" : [ {
+        "svcDt" : "2015-02-14",
+        "plottingDates" : "2015-02-14T00:00:00.000-05:00",
+        "ndcCd" : 59762491005,
+        "mktedProdNm" : "SERTRALINE HCL",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "527134910" : [ {
+        "svcDt" : "2015-02-10",
+        "plottingDates" : "2015-02-14T00:00:00.000-05:00",
+        "ndcCd" : 527134910,
+        "mktedProdNm" : "LEVOTHYROXINE SODIUM",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    } ]
+  }, {
+    "2015-03" : [ {
+      "16729000101" : [ {
+        "svcDt" : "2015-03-16",
+        "plottingDates" : "2015-03-15T00:00:00.000-04:00",
+        "ndcCd" : 16729000101,
+        "mktedProdNm" : "GLIMEPIRIDE",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "185010110" : [ {
+        "svcDt" : "2015-03-06",
+        "plottingDates" : "2015-03-15T00:00:00.000-04:00",
+        "ndcCd" : 185010110,
+        "mktedProdNm" : "LISINOPRIL",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 15235174
+      } ]
+    }, {
+      "781107701" : [ {
+        "svcDt" : "2015-03-04",
+        "plottingDates" : "2015-03-15T00:00:00.000-04:00",
+        "ndcCd" : 781107701,
+        "mktedProdNm" : "ALPRAZOLAM",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 1634436
+      } ]
+    } ]
+  }, {
+    "2015-04" : [ {
+      "781150610" : [ {
+        "svcDt" : "2015-04-20",
+        "plottingDates" : "2015-04-15T00:00:00.000-04:00",
+        "ndcCd" : 781150610,
+        "mktedProdNm" : "ATENOLOL",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 721076
+      } ]
+    }, {
+      "54458096510" : [ {
+        "svcDt" : "2015-04-18",
+        "plottingDates" : "2015-04-15T00:00:00.000-04:00",
+        "ndcCd" : 54458096510,
+        "mktedProdNm" : "MELOXICAM",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 978685
+      } ]
+    } ]
+  }, {
+    "2015-05" : [ {
+      "65027510" : [ {
+        "svcDt" : "2015-05-04",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 65027510,
+        "mktedProdNm" : "AZOPT",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 2633091
+      } ]
+    }, {
+      "591024005" : [ {
+        "svcDt" : "2015-05-19",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 591024005,
+        "mktedProdNm" : "LORAZEPAM",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 2050111
+      } ]
+    }, {
+      "68382041210" : [ {
+        "svcDt" : "2015-05-15",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 68382041210,
+        "mktedProdNm" : "OMEPRAZOLE",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "527134910" : [ {
+        "svcDt" : "2015-05-15",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 527134910,
+        "mktedProdNm" : "LEVOTHYROXINE SODIUM",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "185010110" : [ {
+        "svcDt" : "2015-05-11",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 185010110,
+        "mktedProdNm" : "LISINOPRIL",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 15235174
+      } ]
+    }, {
+      "173068220" : [ {
+        "svcDt" : "2015-05-05",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 173068220,
+        "mktedProdNm" : "VENTOLIN HFA",
+        "daysSupplyCnt" : 25,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "59762491005" : [ {
+        "svcDt" : "2015-05-26",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 59762491005,
+        "mktedProdNm" : "SERTRALINE HCL",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "93221001" : [ {
+        "svcDt" : "2015-05-05",
+        "plottingDates" : "2015-05-15T00:00:00.000-04:00",
+        "ndcCd" : 93221001,
+        "mktedProdNm" : "SUCRALFATE",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 1873331
+      } ]
+    } ]
+  }, {
+    "2015-06" : [ {
+      "16729000101" : [ {
+        "svcDt" : "2015-06-17",
+        "plottingDates" : "2015-06-15T00:00:00.000-04:00",
+        "ndcCd" : 16729000101,
+        "mktedProdNm" : "GLIMEPIRIDE",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "93310905" : [ {
+        "svcDt" : "2015-06-08",
+        "plottingDates" : "2015-06-15T00:00:00.000-04:00",
+        "ndcCd" : 93310905,
+        "mktedProdNm" : "AMOXICILLIN",
+        "daysSupplyCnt" : 10,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "781150610" : [ {
+        "svcDt" : "2015-06-18",
+        "plottingDates" : "2015-06-15T00:00:00.000-04:00",
+        "ndcCd" : 781150610,
+        "mktedProdNm" : "ATENOLOL",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 721076
+      } ]
+    } ]
+  }, {
+    "2015-07" : [ {
+      "591024005" : [ {
+        "svcDt" : "2015-07-25",
+        "plottingDates" : "2015-07-15T00:00:00.000-04:00",
+        "ndcCd" : 591024005,
+        "mktedProdNm" : "LORAZEPAM",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 2050111
+      } ]
+    }, {
+      "65162044210" : [ {
+        "svcDt" : "2015-07-01",
+        "plottingDates" : "2015-07-15T00:00:00.000-04:00",
+        "ndcCd" : 65162044210,
+        "mktedProdNm" : "MECLIZINE HCL",
+        "daysSupplyCnt" : 15,
+        "pharmacyId" : 808029
+      } ]
+    }, {
+      "310075590" : [ {
+        "svcDt" : "2015-07-24",
+        "plottingDates" : "2015-07-15T00:00:00.000-04:00",
+        "ndcCd" : 310075590,
+        "mktedProdNm" : "CRESTOR",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 2050111
+      } ]
+    }, {
+      "93221001" : [ {
+        "svcDt" : "2015-07-14",
+        "plottingDates" : "2015-07-15T00:00:00.000-04:00",
+        "ndcCd" : 93221001,
+        "mktedProdNm" : "SUCRALFATE",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 1873331
+      } ]
+    }, {
+      "23485745" : [ {
+        "svcDt" : "2015-07-01",
+        "plottingDates" : "2015-07-15T00:00:00.000-04:00",
+        "ndcCd" : 23485745,
+        "mktedProdNm" : "VANIQA",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 6058776
+      } ]
+    } ]
+  }, {
+    "2015-08" : [ {
+      "93221001" : [ {
+        "svcDt" : "2015-08-05",
+        "plottingDates" : "2015-08-15T00:00:00.000-04:00",
+        "ndcCd" : 93221001,
+        "mktedProdNm" : "SUCRALFATE",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 1873331
+      } ]
+    }, {
+      "60505082901" : [ {
+        "svcDt" : "2015-08-28",
+        "plottingDates" : "2015-08-15T00:00:00.000-04:00",
+        "ndcCd" : 60505082901,
+        "mktedProdNm" : "FLUTICASONE PROPIONATE",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 721076
+      } ]
+    }, {
+      "527134901" : [ {
+        "svcDt" : "2015-08-27",
+        "plottingDates" : "2015-08-15T00:00:00.000-04:00",
+        "ndcCd" : 527134901,
+        "mktedProdNm" : "LEVOTHYROXINE SODIUM",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    } ]
+  }, {
+    "2015-09" : [ {
+      "68382041205" : [ {
+        "svcDt" : "2015-09-03",
+        "plottingDates" : "2015-09-15T00:00:00.000-04:00",
+        "ndcCd" : 68382041205,
+        "mktedProdNm" : "OMEPRAZOLE",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "16729000101" : [ {
+        "svcDt" : "2015-09-21",
+        "plottingDates" : "2015-09-15T00:00:00.000-04:00",
+        "ndcCd" : 16729000101,
+        "mktedProdNm" : "GLIMEPIRIDE",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "68180051403" : [ {
+        "svcDt" : "2015-09-10",
+        "plottingDates" : "2015-09-15T00:00:00.000-04:00",
+        "ndcCd" : 68180051403,
+        "mktedProdNm" : "LISINOPRIL",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 15235174
+      } ]
+    }, {
+      "54458096510" : [ {
+        "svcDt" : "2015-09-17",
+        "plottingDates" : "2015-09-15T00:00:00.000-04:00",
+        "ndcCd" : 54458096510,
+        "mktedProdNm" : "MELOXICAM",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 978685
+      } ]
+    }, {
+      "65862001305" : [ {
+        "svcDt" : "2015-09-03",
+        "plottingDates" : "2015-09-15T00:00:00.000-04:00",
+        "ndcCd" : 65862001305,
+        "mktedProdNm" : "SERTRALINE HCL",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 581220
+      } ]
+    }, {
+      "29033000301" : [ {
+        "svcDt" : "2015-09-22",
+        "plottingDates" : "2015-09-15T00:00:00.000-04:00",
+        "ndcCd" : 29033000301,
+        "mktedProdNm" : "SUCRALFATE",
+        "daysSupplyCnt" : 90,
+        "pharmacyId" : 1634436
+      } ]
+    }, {
+      "93221001" : [ {
+        "svcDt" : "2015-09-14",
+        "plottingDates" : "2015-09-15T00:00:00.000-04:00",
+        "ndcCd" : 93221001,
+        "mktedProdNm" : "SUCRALFATE",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 1873331
+      } ]
+    } ]
+  }, {
+    "2015-10" : [ {
+      "68462017901" : [ {
+        "svcDt" : "2015-10-29",
+        "plottingDates" : "2015-10-15T00:00:00.000-04:00",
+        "ndcCd" : 68462017901,
+        "mktedProdNm" : "NAPROXEN SODIUM",
+        "daysSupplyCnt" : 15,
+        "pharmacyId" : 1873331
+      } ]
+    }, {
+      "16714040504" : [ {
+        "svcDt" : "2015-10-07",
+        "plottingDates" : "2015-10-15T00:00:00.000-04:00",
+        "ndcCd" : 16714040504,
+        "mktedProdNm" : "LARIN FE 1.5/30",
+        "daysSupplyCnt" : 28,
+        "pharmacyId" : 1873331
+      } ]
+    } ]
+  }, {
+    "2015-11" : [ {
+      "23485745" : [ {
+        "svcDt" : "2015-11-30",
+        "plottingDates" : "2015-11-15T00:00:00.000-05:00",
+        "ndcCd" : 23485745,
+        "mktedProdNm" : "VANIQA",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 6058776
+      } ]
+    }, {
+      "58160090352" : [ {
+        "svcDt" : "2015-11-22",
+        "plottingDates" : "2015-11-15T00:00:00.000-05:00",
+        "ndcCd" : 58160090352,
+        "mktedProdNm" : "FLUARIX QUADRIVALENT 2015",
+        "daysSupplyCnt" : 1,
+        "pharmacyId" : 721076
+      } ]
+    }, {
+      "60505082901" : [ {
+        "svcDt" : "2015-11-23",
+        "plottingDates" : "2015-11-15T00:00:00.000-05:00",
+        "ndcCd" : 60505082901,
+        "mktedProdNm" : "FLUTICASONE PROPIONATE",
+        "daysSupplyCnt" : 30,
+        "pharmacyId" : 721076
+      } ]
+    } ]
+  } ]
+}

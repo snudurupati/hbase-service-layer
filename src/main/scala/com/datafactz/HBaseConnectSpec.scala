@@ -12,7 +12,7 @@ package com.datafactz
     def getSummaryData(code: String): String
 
     //returns a JSON string of counts by groupByKey for a given ndc_cd/diag_cd/prc_cd and date range.
-    def getAggregateData(ndc_cd:BigInt, diag_cd: BigInt, prc_cd: BigInt, fromDt :String, toDt: String): String
+    def getAggregateData(ndc_cd:BigInt, diag_cd: BigInt, prc_cd: BigInt, groupByKey: String, fromDt :String, toDt: String): String
 
     //returns a JSON string of all distinct pay types and specialities
     def getFilterData: String
@@ -20,6 +20,6 @@ package com.datafactz
     //returns a JSON string of a list of patient attributes given a ndc_cd, stateCd and date range
     def getPatientList(state_cd: String, ndc_cd: BigInt, fromDt :String, toDt: String): String
 
-    //returns a JSNON string a patient's Rx, Diag and Prc timeline data given a patientId and date range
+    //returns a JSON string a patient's Rx, Diag and Prc timeline data given a patientId and date range
     def getPatientHistory(patientId: BigInt, fromDt :String, toDt: String): String
   }

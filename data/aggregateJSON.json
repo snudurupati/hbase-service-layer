@@ -1,0 +1,25 @@
+[ {
+  "stateCd" : "CT",
+  "count" : 1
+}, {
+  "stateCd" : "GA",
+  "count" : 1
+}, {
+  "stateCd" : "NC",
+  "count" : 1
+}, {
+  "stateCd" : "NJ",
+  "count" : 1
+}, {
+  "stateCd" : "NM",
+  "count" : 1
+}, {
+  "stateCd" : "NY",
+  "count" : 1
+}, {
+  "stateCd" : "RI",
+  "count" : 21
+}, {
+  "stateCd" : "SC",
+  "count" : 1
+} ]
