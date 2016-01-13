@@ -5,7 +5,10 @@ Contains specification of methods that will be used to retrieve patient data fro
 ## Code Example
 
 Code contains a trait with the method specification  as well as a class implementing the trait and the underlying methods and definitions as a reference for typical usage.
+<<<<<<< HEAD
 Code has dependency on a local MySQL server so will not work without it.
+=======
+>>>>>>> origin/master
 
 ## Data
 
