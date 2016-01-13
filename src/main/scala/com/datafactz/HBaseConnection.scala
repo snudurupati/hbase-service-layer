@@ -15,31 +15,13 @@ import scala.collection.mutable.ListBuffer
   *         Implementation of HBase data retrieval methods for Patient Insights Visualization
   */
 
-object HBasePatientData extends HBaseConnectSpec{
+class HBaseConnection extends HBaseConnectSpec{
 
   case class rxRecord(age: Int, gender: String, YearMonth: String, svcDt: String, mktedProdNm: String, daysSupplyCnt: Int, pharmacyId: Int, ndcCd: BigInt)
   case class dateRecord(YearMonth: String, svcDt: String, mktedProdNm: String, daysSupplyCnt: Int, pharmacyId: Int, ndcCd: BigInt) extends Ordered[dateRecord] {
     def compare(that: dateRecord): Int = this.svcDt compare that.svcDt
   }
   case class monthRecord(dateRecords: List[dateRecord])
-  case class ndcRecord(ndcCd: BigInt, svcDt: String, mktedProdNm: String, daysSupplyCnt: Int, pharmacyId: Int)
-  case class market(marketId: Int, marketNm: String)
-  case class countsRecord(stateID: String, patientCnt: Int)
-
-  def main (args: Array[String]) {
-
-    val patientHistJSON     = getPatientHistory(234550033, "2014-01-01", "2015-12-31")
-    val summaryJSON     = getSummaryData("market")
-    val aggregateJSON   = getAggregateData(781149668, null, null, "stateCd", "2014-01-01", "2015-12-31")
-    val filterJSON      = getFilterData
-    val patientListJSON = getPatientList("RI", 173068220, "2014-01-01", "2014-12-31")
-
-    //println(patientHistJSON)
-    //println(summaryJSON)
-    //println(aggregateJSON)
-    //println(filterJSON)
-    //println(patientListJSON)
-  }
 
   // connect to the database named "mysql" on the localhost
   val driver = "com.mysql.jdbc.Driver"
@@ -125,7 +107,7 @@ object HBasePatientData extends HBaseConnectSpec{
   *   Actual implementation of the methods specified in HBaseConnectSpec trait
   */
 
-  //returns a JSNON string a patient's Rx, Diag and Prc timeline data given a patientId and date range
+  //returns a JSON string a patient's Rx, Diag and Prc timeline data given a patientId and date range
   def getPatientHistory(patientId: BigInt, svcFrDt: String, svcToDt: String) = {
     var rxHistoryBuilder = new ListBuffer[rxRecord]()
     var ndcBuilder = new ListBuffer[BigInt] ()
@@ -209,159 +191,6 @@ object HBasePatientData extends HBaseConnectSpec{
   }
 
   //returns a JSON string of all markets/diagnosis/procedures and corresponding products/diagnosis type/procedure types
-  def getSummaryData(code: String) = {
-    var summaryBuilder = new ListBuffer[market]()
-
-    val getMarkets = "select marketId, marketNm from Markets group by marketId order by marketId;"
-
-    try {
-      // make the connection
-      Class.forName(driver).newInstance()
-      connection = DriverManager.getConnection(url, username, password)
-
-      // create the statement, and run the select query
-      val statement = connection.createStatement()
-
-      val rs = statement.executeQuery(getMarkets)
-      while (rs.next()) {
-        var record = new market(
-          rs.getInt("marketId"),
-          rs.getString("marketNm"))
-        summaryBuilder += record
-      }
-    } catch {
-      case e: Throwable => "JDBC Connection ERROR: " + e.printStackTrace
-    }
-
-    val summary = summaryBuilder.toList
-
-    val summaryJson =
-      (summary.map { w =>
-        ("id" -> w.marketId) ~
-          ("name" -> w.marketNm)
-      })
-
-    val prettySummaryJson = pretty(render(summaryJson))
-    prettySummaryJson
-  }
-
-  //returns a JSON string of counts by groupByKey for a given ndc_cd/diag_cd/prc_cd and date range.
-  def getAggregateData(ndc_cd: BigInt, diag_cd: BigInt, prc_cd: BigInt, groupByKey: String, fromDt :String, toDt: String): String  = {
-    var countsBuilder = new ListBuffer[countsRecord]()
-
-    var getCounts: String = null
-    if (diag_cd != null && prc_cd != null) {
-      getCounts = "select stateCd, count(patientId) as patientCnt from rxData where ndcCd =" + ndc_cd + " and diagCd = " + diag_cd + " and prcCd = " + diag_cd + " and svcDate between '" +  fromDt + "' and '"  + toDt + "' group by " + groupByKey + ";"
-    }
-    else {
-      getCounts = "select stateCd, count(patientId) as patientCnt from rxData where ndcCd =" + ndc_cd + " and svcDate between '" +  fromDt + "' and '"  + toDt + "' group by " + groupByKey + ";"
-    }
-
-    try {
-      // make the connection
-      Class.forName(driver).newInstance()
-      connection = DriverManager.getConnection(url, username, password)
-
-      // create the statement, and run the select query
-      val statement = connection.createStatement()
-
-      val rs = statement.executeQuery(getCounts)
-      while ( rs.next() ) {
-        var record = new countsRecord(
-          rs.getString("stateCd"),
-          rs.getInt("patientCnt"))
-        countsBuilder += record
-      }
-    } catch {
-      case e: Throwable => "JDBC Connection ERROR: " + e.printStackTrace
-    }
-
-    connection.close()
-
-    val counts = countsBuilder.toList
-
-    val ndcJson =
-      (
-        counts.map { w =>
-          (
-            ("stateCd" -> w.stateID) ~
-              ("count" -> w.patientCnt)
-            )
-        }
-        )
-
-    val prettyPatCountJson = pretty(render(ndcJson))
-
-    prettyPatCountJson
-  }
-
-  //returns a JSON string of all distinct pay types and specialities
-  def getFilterData: String = {
-    var payTypeBuilder = new ListBuffer[(Int, String)] ()
-    var specialityBuilder = new ListBuffer[String] ()
-
-    val getPayTypes = "select distinct payType from rxData where payType != 0 order by 1 asc;"
-    val getSpecialities = "select distinct priSpclCd from dxData where priSpclCd != 'priSpclCd' and priSpclCd != '' order by 1 asc;"
-
-    try {
-      // make the connection
-      Class.forName(driver).newInstance()
-      connection = DriverManager.getConnection(url, username, password)
-
-      // create the statement, and run the select query
-      val statement = connection.createStatement()
-
-      val rs = statement.executeQuery(getPayTypes)
-      while ( rs.next() ) {
-        val payID = rs.getInt("payType")
-        if (payID == 1) {
-          payTypeBuilder += ((payID, "Visa"))
-        }
-        else if (payID == 2) {
-          payTypeBuilder += ((payID, "Mastercard"))
-        }
-        else if (payID == 3) {
-          payTypeBuilder += ((payID, "Discover"))
-        }
-      }
-    } catch {
-      case e: Throwable => "JDBC Connection ERROR: " + e.printStackTrace
-    }
-
-    val filtersStatement = connection.createStatement()
-
-    val rs = filtersStatement.executeQuery(getSpecialities)
-    while ( rs.next() ) {
-      specialityBuilder += rs.getString("priSpclCd")
-    }
-
-    connection.close()
-
-    val payTypes = payTypeBuilder.toList
-    val specialities = specialityBuilder.toList
-
-    val payTypeJson =
-      (
-        payTypes.map { w =>
-          (
-            ("id" -> w._1) ~
-              ("name" -> w._2)
-            )
-        }
-        )
-
-    val specialitiesJson =
-      (
-        specialities.map { w =>
-          (
-            ("id" -> w)
-            )
-        }
-        )
-
-    val prettyFiltersJson = pretty(render(payTypeJson)) + "\n\n" + pretty(render(specialitiesJson))
-    prettyFiltersJson
-  }
 
   //returns a JSON string of a list of patient attributes given a ndc_cd, stateCd and date range
   def getPatientList(state_cd: String, ndc_cd: BigInt, fromDt :String, toDt: String): String = {
